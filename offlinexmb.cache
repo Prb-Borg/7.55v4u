@@ -7,6 +7,7 @@ index.css
 index.html
 README.md
 common\blob.js
+common\exp_jailbreak0.js
 common\exp_jailbreak1.js
 common\exp_jailbreak2.js
 common\exp_jailbreak3.js
@@ -102,5 +103,3 @@ payload\fan_control\pl_fancontrol65.bin
 payload\fan_control\pl_fancontrol70.bin
 payload\fan_control\pl_fancontrol75.bin
 payload\fan_control\pl_fancontrol80.bin
-payload\fan_control\pl_fancontrol85.bin
-payload\fan_control\pl_fancontrol90.bin

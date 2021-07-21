@@ -1,6 +1,6 @@
 <html manifest="offlinexmb.cache">
 <head>
-<title>Prb 7.55 V4 Exploit Menu Update 3</title>
+<title>Prb 7.55 V4 Exploit Menu Update 5</title>
 <link rel="stylesheet" href="index.css">
 <body id=cache style="color:white;font-size:20px;" onload="go();" class="bg">
 <script>
@@ -55,8 +55,9 @@ mymenu.style.display="block";
     <div class="subnav">
     <button style='font-size:25px;text-align:center;color:white' class="button button2" class="subnavbtn" >Exploit<i class="fa fa-caret-down"></i></button>&nbsp;
     <div class="subnav-content">
-	 <br><br><button  onMouseOver="msgs.innerHTML='<U>Exploit - By Sleirsgoevy</U><br><br>Latest Kernel Exploit 3rd June.<br>This is a full chain exploit for PS4 firmware 7.55.<br>With PS4-specific kROP & kernel patches.'"; onmouseout="msgs.innerHTML=''" onclick="load_exploit1(); return false"><img src="img/exploit.png"></button>
-	 <button  onMouseOver="msgs.innerHTML='<U>Exploit - By Sleirsgoevy</U><br><br>Latest Kernel Exploit 27th May.<br>This is a full chain exploit for PS4 firmware 7.55.<br>Basically this is TheFlows POC together with PS4-specific kROP & kernel patches.'"; onmouseout="msgs.innerHTML=''" onclick="load_exploit2(); return false"><img src="img/exploit.png"></button>
+	 <br><br><button  onMouseOver="msgs.innerHTML='<U>Exploit - By Sleirsgoevy</U><br><br>Latest Kernel Exploit 20th July.<br>This is a full chain exploit for PS4 firmware 7.55.<br>With PS4-specific kROP & kernel patches.'"; onmouseout="msgs.innerHTML=''" onclick="load_exploit0(); return false"><img src="img/exploit.png"></button>
+	 <button  onMouseOver="msgs.innerHTML='<U>Exploit - By Sleirsgoevy</U><br><br>Kernel Exploit 3rd June.<br>This is a full chain exploit for PS4 firmware 7.55.<br>With PS4-specific kROP & kernel patches.'"; onmouseout="msgs.innerHTML=''" onclick="load_exploit1(); return false"><img src="img/exploit.png"></button>
+	 <button  onMouseOver="msgs.innerHTML='<U>Exploit - By Sleirsgoevy</U><br><br>Kernel Exploit 27th May.<br>This is a full chain exploit for PS4 firmware 7.55.<br>Basically this is TheFlows POC together with PS4-specific kROP & kernel patches.'"; onmouseout="msgs.innerHTML=''" onclick="load_exploit2(); return false"><img src="img/exploit.png"></button>
      <button  onMouseOver="msgs.innerHTML='<U>Exploit - By Sleirsgoevy</U><br><br>Kernel Exploit 20th May.<br>This is a full chain exploit for PS4 firmware 7.55.<br>Basically this is TheFlows POC together with PS4-specific kROP & kernel patches.'"; onmouseout="msgs.innerHTML=''" onclick="load_exploit3(); return false"><img src="img/exploit.png"></button>
     </div>
   </div>
@@ -174,9 +175,7 @@ mymenu.style.display="block";
       <button onMouseOver="msgs.innerHTML='Fan Control Set Temp 70c.<br><br>Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML=''" onclick="load_fancontrol70(); return false"><img src="img/fan.png"></button>
 	  <button onMouseOver="msgs.innerHTML='Fan Control Set Temp 75c.<br><br>Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML=''" onclick="load_fancontrol75(); return false"><img src="img/fan.png"></button>
       <button onMouseOver="msgs.innerHTML='Fan Control Set Temp 80c.<br><br>Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML=''" onclick="load_fancontrol80(); return false"><img src="img/fan.png"></button>
-      <button onMouseOver="msgs.innerHTML='Fan Control Set Temp 85c.<br><br>Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML=''" onclick="load_fancontrol85(); return false"><img src="img/fan.png"></button>
-      <button onMouseOver="msgs.innerHTML='Fan Control Set Temp 90c.<br><br>Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML=''" onclick="load_fancontrol90(); return false"><img src="img/fan.png"></button>
-	  </div>
+      </div>
 	</div>
 	
 	  <br><br><br><br><br><br><br><br><br>
@@ -201,8 +200,14 @@ window.passCounter.innerHTML=localStorage.passcount;
 if (localStorage.failcount == null) localStorage.failcount=0;
 window.failCounter.innerHTML=localStorage.failcount;
 
-function load_exploit1(){
+function load_exploit0(){
 msgs.innerHTML="Loading New Exploit Please Wait ...";
+function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
+function loadScript(){getScript("common/exp_jailbreak0.js",function(){setTimeout(jailbreak,000);});}loadScript();
+}
+
+function load_exploit1(){
+msgs.innerHTML="Loading Exploit Please Wait ...";
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
 function loadScript(){getScript("common/exp_jailbreak1.js",function(){setTimeout(jailbreak,000);});}loadScript();
 }
@@ -214,7 +219,7 @@ function loadScript(){getScript("common/exp_jailbreak2.js",function(){setTimeout
 }
 
 function load_exploit3(){
-msgs.innerHTML="Loading old Exploit Please Wait ...";
+msgs.innerHTML="Loading Exploit Please Wait ...";
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
 function loadScript(){getScript("common/exp_jailbreak3.js",function(){setTimeout(jailbreak,000);});}loadScript();
 }
@@ -612,20 +617,6 @@ function load_fancontrol80(){
 msgs.innerHTML="Loading Fan Control 80c ...";
 LoadedMSG="Fan Control 80c Loaded<br>Use The PS Button When Exiting The Menu";
 PLfile = "payload/fan_control/pl_fancontrol80.bin";
-loadScript2();
-}
-
-function load_fancontrol85(){
-msgs.innerHTML="Loading Fan Control 85c ...";
-LoadedMSG="Fan Control 85c Loaded<br>Use The PS Button When Exiting The Menu";
-PLfile = "payload/fan_control/pl_fancontrol85.bin";
-loadScript2();
-}
-
-function load_fancontrol90(){
-msgs.innerHTML="Loading Fan Control 90c ...";
-LoadedMSG="Fan Control 90c Loaded<br>Use The PS Button When Exiting The Menu";
-PLfile = "payload/fan_control/pl_fancontrol90.bin";
 loadScript2();
 }
 
